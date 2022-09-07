@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <h1>
+      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
+      <span>WE Movies</span>
+    </h1>
+    <app-best-movie></app-best-movie>
+    <app-search></app-search>
+
+    <div class="row">
+      <div class="col-4">
+        <app-genders (gendersChange)="onGendersChange($event)"></app-genders>
+      </div>
+      <div class="col-8">
+        <app-movies [genders]="genders"></app-movies>
+      </div>
+
+    </div>
+  </div>
+</div>
